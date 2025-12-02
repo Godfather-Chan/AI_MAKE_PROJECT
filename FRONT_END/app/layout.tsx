@@ -34,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      {/* ⬇️ Geist 기본 className */}
+      {}
       <body className="antialiased">
         {children}
         <Analytics />
