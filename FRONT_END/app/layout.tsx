@@ -1,10 +1,10 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import "./globals.css"
+import type React from "react";
+import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import "./globals.css";
 
-const geist = Geist({ subsets: ["latin"] })
+// ⬇️ Geist 폰트 import (google font 아님)
+import "@geist/font/geist.css";
 
 export const metadata: Metadata = {
   title: "미루어보자 - AI 기반 영화·음악 취향 테스트",
@@ -27,20 +27,20 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
-}
+};
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="ko">
-          <body className={`${font.className} antialiased`}>
+      {/* ⬇️ Geist 기본 className */}
+      <body className="font-geist antialiased">
         {children}
         <Analytics />
       </body>
     </html>
-  )
+  );
 }
-
