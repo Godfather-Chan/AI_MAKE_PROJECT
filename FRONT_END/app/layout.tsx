@@ -1,10 +1,10 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist } from "next/font/google"
+import { GeistSans } from "next/font/google"   // 🔥 수정
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const geist = Geist({ subsets: ["latin"] })
+const geist = GeistSans({ subsets: ["latin"] }) // 🔥 수정
 
 export const metadata: Metadata = {
   title: "미루어보자 - AI 기반 영화·음악 취향 테스트",
@@ -43,3 +43,4 @@ export default function RootLayout({
     </html>
   )
 }
+
