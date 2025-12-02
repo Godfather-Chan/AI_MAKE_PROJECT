@@ -3,8 +3,6 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-// ⬇️ Geist 폰트 import (google font 아님)
-import "@geist/font/geist.css";
 
 export const metadata: Metadata = {
   title: "미루어보자 - AI 기반 영화·음악 취향 테스트",
